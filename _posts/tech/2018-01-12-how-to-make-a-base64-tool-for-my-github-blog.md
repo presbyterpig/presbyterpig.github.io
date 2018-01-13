@@ -9,7 +9,33 @@ keywords: VC,base64
 
 ## 1. 缘起
 
-想弄个方便的博客贴图工具。
+在2017年的最后一天，我加入了github的大家庭。
+
+我使用gi+thub的主要目的不是托管代码，而是为了写Blog 8-)
+
+博客嘛，自然是图文并茂的比较好看。
+
+问题来了，怎样显示图片？
+
+很多年以前学过的一点HTML知识告诉我，要先把图片传到服务器上，然后img标签指向该图片的网址。
+
+流程是这样：
+
+> 1. 拍照
+> 2. 把图片传到图片服务器(所谓的图床)，得到一个图片地址，比如http://www.ab.com/pic.jpg
+> 3. 网页里面写\!\[\](http://www.ab.com/pic.jpg)
+ 
+上述步骤，感觉第2步太麻烦。如果图床挂了，则页面将惨不忍睹。
+
+从网上搜索得到,贴图还有另外一种方法：<img src="data:image/png;base64,后面跟base64编码"/\>
+
+于是从网上下载了一个base64编码工具，完成了我的第1篇带图片的博客需求。
+
+但是，这个编码工具很不合我意： 它输入文件，输出编码后的文件。 
+
+这意味着转换后，我还得用记事本打开该文件，全选，复制。
+
+作为一个业余程序员，当然不满足了，拿出心爱的Visual Studio,开始coding...
 
 
 ## 2. 成品一览
@@ -1743,5 +1769,31 @@ p22EVqxQU5E+wxRbMnPUOVU58ZIx4nPSl5+CTbtNZPA0DzRC5HE7rVnqkZYZ8ZA5x5HQf8hWJosm
 hrtnwCUvCX1dk6plTiJyQ0t/U/uA5a1QJfuoRAZ9cq2WmV9lDnHSizzKZKssciNxiitS5gXg2MNK
 RkBWMIu0HXnK39ec8dL6olcdqa6Fc8Gr/C9ABzAL0dc49AAAAABJRU5ErkJggg=="/>
 
-## 3.过程详述
-todo here
+## 3.工具详述
+工具类不需要太花哨的东西，用一个标准的Dialog呈现。
+
+分为左右两栏，左边显示图片，右边是edit.
+
+从Windows资源管理器拖放一个图片文件到左栏，
+
+则生成对应的base64文本(从上图可以看到，我把<img标签也顺便加进去了),放入到Edit控件中，并已经自动复制到剪贴板了。
+
+下面是关键代码：
+
+响应WM_DROPFILES消息
+
+    #include <atlenc.h>
+
+    int LenEncoded = Base64EncodeGetRequiredLength(dwRead);
+    CStringA strEncodedA;
+    Base64Encode((const BYTE*)readBuffer,dwRead,strEncodedA.GetBuffer(LenEncoded),&LenEncoded);
+    strEncodedA.ReleaseBuffer(LenEncoded);
+    
+	CString strEncoded(strEncodedA);
+	
+	//将markdown头写入
+	CString strHead = L"<img src=\"data:image/png;base64,";
+	strEncoded = strHead + strEncoded + L"\"/>";
+    
+	SetDlgItemText(IDC_EDIT1,strEncoded);
+
