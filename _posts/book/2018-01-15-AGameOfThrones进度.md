@@ -1,6 +1,6 @@
 ---
 layout: post
-title: AGameOfThrones的读书进度
+title: A Game Of Thrones 的读书进度
 category: 读书
 keywords: 读原版书,2018
 ---
