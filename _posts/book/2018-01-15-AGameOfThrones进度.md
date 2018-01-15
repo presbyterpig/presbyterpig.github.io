@@ -5,13 +5,13 @@ category: 读书
 keywords: 读原版书,2018
 ---
 
-#读书计划#
+##读书计划##
 每天至少读2页（即4面）。手机的话，约为12屏。
 
-#读书进度#
+##读书进度##
 2018-01-15： 21/807  
 
-#生字#
+##生字##
 sable: 貂；貂皮
 
 figurative:比喻
@@ -22,7 +22,7 @@ well: <动词>涌出，迸发
 
 pup: 小狗、小狼等。puppy的略语
 
-#A Game Of Thrones的样貌#
+##A Game Of Thrones的样貌##
 <img src="data:image/png;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAsJCgsKEQ0LFQsODg0PEyAVExISEyccHhcgLikxMC4p
 LSwzOko+MzZGNywtQFdBRkxOUlNSMj5aYVpQYEpRUk//2wBDAQoODhMREyYVFSZPNS01T09PT09P
 T09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT0//wgARCAUAA8ADASIA
