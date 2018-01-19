@@ -9,18 +9,26 @@ keywords: 读原版书,2018
 每天至少读2页（即4面）。手机的话，约为12屏。
 
 ## 读书进度
-2018-01-15: 21/807</br>
+2018-01-15: 21/807
+
 2018-01-19: 33/807  
 
 ## 生字
-species: 物种 the Original of Species 物种起源</br>
-spice: 香辛料</br>
-sable: 貂；貂皮</br>
-figurative:比喻</br>
-spicy: 辛辣</br>
-well: <动词>涌出，迸发</br>
-pup: 小狗、小狼等。puppy的略语</br>
-regal: 帝王的</br>
+species: 物种 the Original of Species 物种起源
+
+spice: 香辛料
+
+sable: 貂；貂皮
+
+figurative:比喻
+
+spicy: 辛辣
+
+well: <动词>涌出，迸发
+
+pup: 小狗、小狼等。puppy的略语
+
+regal: 帝王的
 
 ## 我的A Game Of Thrones
 <img src="data:image/png;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAsJCgsKEQ0LFQsODg0PEyAVExISEyccHhcgLikxMC4p
